@@ -8,7 +8,7 @@ from flask_socketio import SocketIO,send,emit,join_room,leave_room
 
 app=Flask(__name__)
 
-app.secret_key='replace later'
+app.secret_key='9c8f7cfb7c60b59db0b81d7175797aa6'
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///site.db'
 db=SQLAlchemy(app)
 socketio=SocketIO(app)
