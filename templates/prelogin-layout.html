@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %} - Chatify</title>
+</head>
+<body>
+	{% with messages = get_flashed_messages(with_categories=True) %}
+		{% if messages %}
+			Category: {{ messages[0][0] }}
+			{{ messages[0][1] }}
+		{% endif %}
+	{% endwith %}
+	{% block content %}
+	{% endblock %}
+</body>
+</html>
